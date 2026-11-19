@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Black Family Takeover 2027</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<style>
+/* Layout: one reading column (~760px) with wide fact tables; dark Pacific hero band, then sectioned guide, then the form. */
+:root{
+  --bg:#F2F5F3; --surface:#FFFFFF; --ink:#13282B; --muted:#4E6466; --line:#D3DEDB;
+  --accent:#B85A1F; --accent-ink:#FFFFFF; --sea:#1F5C5E; --hero:#0E2A2F; --hero-ink:#EADFC8; --hero-muted:#A9BDB9; --hero-accent:#F4A259;
+  --ok:#2F6B3F; --warn:#8A5A00;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1F23; --surface:#11292E; --ink:#E7E1D3; --muted:#A3B5B2; --line:#24434A;
+  --accent:#F4A259; --accent-ink:#1A1206; --sea:#7FC8C2; --hero:#0E2A2F; --hero-ink:#EADFC8; --hero-muted:#A9BDB9; --hero-accent:#F4A259;
+  --ok:#8FD19E; --warn:#F2C46B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1F23; --surface:#11292E; --ink:#E7E1D3; --muted:#A3B5B2; --line:#24434A;
+  --accent:#F4A259; --accent-ink:#1A1206; --sea:#7FC8C2; --hero:#0E2A2F; --hero-ink:#EADFC8; --hero-muted:#A9BDB9; --hero-accent:#F4A259;
+  --ok:#8FD19E; --warn:#F2C46B; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hero{background:var(--hero);color:var(--hero-ink)}
+.hero .wrap{padding-block:56px 48px;display:flex;flex-direction:column;gap:20px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.hero .eyebrow{color:var(--hero-accent)}
+.hero h1{margin:0;font-family:var(--display);font-weight:900;font-size:clamp(64px,13vw,128px);line-height:.86;text-transform:uppercase;text-wrap:balance}
+.hero h1 span{color:var(--hero-accent)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:18px;font-weight:500}
+.hero .meta b{font-family:var(--display);font-size:30px;letter-spacing:.01em;font-weight:700;display:block;line-height:1.1}
+.hero .meta small{color:var(--hero-muted);font-size:14px}
+.hero p{margin:0;max-width:60ch;color:#C9D3CF;font-size:18px}
+.hero p.cheek{color:var(--hero-ink);font-size:22px;font-weight:500;line-height:1.4}
+.tide{display:block;width:100%;max-width:480px;height:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:999px;background:var(--hero-accent);color:#1A1206;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+nav.toc a{flex:none;font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px}
+nav.toc a:hover{background:var(--surface);color:var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+main .wrap{padding-block:16px 64px;display:flex;flex-direction:column;gap:56px}
+section{display:flex;flex-direction:column;gap:16px;scroll-margin-top:64px}
+#founding{scroll-margin-top:64px}
+h2{margin:0;font-family:var(--display);font-weight:700;font-size:40px;line-height:1;text-transform:uppercase;letter-spacing:.01em}
+h3{margin:0;font-size:17px;font-weight:700}
+p{margin:0;max-width:66ch}
+.lede{font-size:18px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+ul.clean{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:66ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.facts div{background:var(--surface);padding:16px 18px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.facts dt{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-weight:500}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+.week{display:grid;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.day{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:10px 0 10px 20px;position:relative}
+.day::before{content:"";position:absolute;left:-7px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--sea)}
+.day.key::before{background:var(--accent);border-color:var(--accent)}
+.day .when{font-weight:700;font-size:15px}
+.callout{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.callout.accent{border-color:var(--accent)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.step b{font-family:var(--display);font-size:22px;text-transform:uppercase;color:var(--accent)}
+/* form */
+form{display:flex;flex-direction:column;gap:22px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+legend{font-weight:700;padding:0;margin-bottom:4px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+label{font-weight:500;font-size:15px}
+input[type=text],input[type=number],input[type=email],select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px;width:100%}
+textarea{min-height:90px;resize:vertical}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:15px}
+.choice input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.choice input:focus-visible+span{outline:3px solid var(--sea);outline-offset:2px}
+.formfoot{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.formfoot .btn{background:var(--accent);color:var(--accent-ink)}
+.formfoot .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.status{font-size:15px;font-weight:500}
+.status.ok{color:var(--ok)}.status.err{color:var(--warn)}
+.req{color:var(--accent)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.linkgroup{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.linkgroup a{font-weight:500}
+#admin .tot{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+#admin .tot div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px}
+#admin .tot b{display:block;font-family:var(--display);font-size:34px;line-height:1}
+footer .wrap{padding-block:24px 48px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+a{color:var(--sea)}
+@media (max-width:520px){.day{grid-template-columns:1fr;gap:2px}form{padding:18px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Save the date · Summer 2027</div>
+    <h1>Black Family <span>Takeover</span></h1>
+    <svg class="tide" viewBox="0 0 480 30" aria-hidden="true"><path d="M0 8 C40 0 80 16 120 8 S200 0 240 8 S320 16 360 8 S440 0 480 8" fill="none" stroke="#A9BDB9" stroke-opacity=".55" stroke-width="2"/><path d="M0 22 C40 14 80 30 120 22 S200 14 240 22 S320 30 360 22 S440 14 480 22" fill="none" stroke="#A9BDB9" stroke-opacity=".3" stroke-width="2"/></svg>
+    <div class="meta">
+      <div><b>Aug 7–14, 2027</b><small>Saturday to Saturday</small></div>
+      <div><b>Seabrook, WA</b><small>Pacific coast · about 2½ hrs from Seattle, 3 from Portland</small></div>
+    </div>
+    <p class="cheek">Getting to Martha's Vineyard for Illumination keeps getting harder. So we're bringing the Vineyard to the West Coast.</p>
+    <p>A week on the Washington coast with some of our favorite families: game night, a BBQ cookoff, golf, beach yoga, bonfires and real time together. Each family books its own home in one walkable town. We plan the gatherings, and we plan to do it again every other year.</p>
+    <div><a class="btn" href="#interest">Tell us you're interested</a></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="#how">How it works</a><a href="#week">The week</a><a href="#housing">Housing &amp; cost</a><a href="#booking">Booking terms</a><a href="#travel">Getting there</a><a href="#expect">What to expect</a><a href="#timeline">Timeline</a><a href="#resources">Resources</a><a href="#interest">Interest form</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<section id="how">
+  <h2>How it works</h2>
+  <dl class="facts">
+    <div><dt>Arrive</dt><dd>Sat, Aug 7 · homes ready 4:00 PM</dd></div>
+    <div><dt>Depart</dt><dd>Sat, Aug 14 · checkout 11:00 AM</dd></div>
+    <div><dt>Where</dt><dd>Seabrook, a planned beach town near Pacific Beach, WA</dd></div>
+    <div><dt>Lodging</dt><dd>Each family books and pays for its own home</dd></div>
+    <div><dt>Group costs</dt><dd>Shared fund for group meals and events · [AMOUNT TBD]</dd></div>
+    <div><dt>Questions</dt><dd>okekehouse@gmail.com<br>Ben 301-442-4122 · Ang 202-243-8472</dd></div>
+  </dl>
+  <p>Seabrook has more than 300 homes in its vacation rental program, all managed by Seabrook Hospitality, from two-person carriage homes to houses that sleep 20 or more. Everything is walkable: the beach, the pools, the restaurants and the town green. That makes it easy for a large group to spread across many houses and still be together all week.</p>
+  <p>We'll reserve one large "hub" house for group meals and evenings. Your family books its own home nearby, on your own card, under Seabrook's standard terms.</p>
+  <div class="callout accent" id="founding">
+    <h3>What's a founding family?</h3>
+    <p class="small">Founding families are the first households to commit. They lock in the core of the Takeover early, so the week has a group to build around while the best homes near the hub are still open.</p>
+    <ul class="clean small">
+      <li><b>Book by Dec 15, 2026.</b> Founding families either take rooms in the hub house or book their own homes alongside it. Seabrook charges a 50% deposit at booking, fully refunded if you cancel 30 or more days before arrival.</li>
+      <li><b>First pick</b> of hub house rooms and of homes near the hub.</li>
+      <li><b>Help shape the week:</b> the events, the hub house and who runs what.</li>
+      <li><b>Five spots at most.</b> So the hub house doesn't get crowded, the founding option on the form closes once it's full.</li>
+    </ul>
+    <p class="small">Not ready to commit that early? No problem. Everyone else books as early as they're comfortable, and no later than early spring.</p>
+  </div>
+</section>
+
+<section id="week">
+  <h2>The week</h2>
+  <p class="muted">A draft schedule. Daytime activities and evening gatherings, everything optional, plenty of beach time in between.</p>
+  <div class="week">
+    <div class="day key"><div class="when">Sat, Aug 7</div><div><h3>Arrival + opening cookout</h3><p class="muted small">Check in from 4 PM, then grill at the hub house.</p></div></div>
+    <div class="day key"><div class="when">Sun, Aug 8</div><div><h3>Beach yoga + Okeke Family Pizza Party</h3><p class="muted small">Morning flow on the sand led by Nakita Manning of Focus &amp; Flow Collective, all levels. In the evening, the Okekes host pizza night and teach everyone Mau Mau, the family card game, so you can play it all week.</p></div></div>
+    <div class="day key"><div class="when">Mon, Aug 9</div><div><h3>Golf outing + group bike ride, then wine tasting</h3><p class="muted small"><a href="https://oceanshoresgolf.com/" target="_blank" rel="noopener">Ocean Shores Golf Course</a>, a public 18-hole course about 25 minutes south. Non-golfers ride Seabrook's trails; Basecamp in town rents bikes. Evening wine tasting for the grown-ups.</p></div></div>
+    <div class="day key"><div class="when">Tue, Aug 10</div><div><h3>BBQ cookoff + ice cream social</h3><p class="muted small">House against house. Bring your rub, your sauce and your trash talk. Everyone else judges, then we cool off with an ice cream social for all ages.</p></div></div>
+    <div class="day key"><div class="when">Wed, Aug 11</div><div><h3>Game night + beach bonfire with s'mores</h3><p class="muted small">Tables for spades, dominoes, Uno, Mau Mau and Monopoly. Then down to the beach for a bonfire and s'mores; Seabrook keeps its community fire pits stocked with wood.</p></div></div>
+    <div class="day key"><div class="when">Thu, Aug 12</div><div><h3>Illumination Night + whiskey stations</h3><p class="muted small">Our own nod to Oak Bluffs: lanterns and string lights on every Takeover porch and a walk through town to see them all. Along the way, a few host homes each pour a different whiskey for the grown-ups to try.</p></div></div>
+    <div class="day key"><div class="when">Fri, Aug 13</div><div><h3>Closing yoga, farewell dinner + karaoke</h3><p class="muted small">One more flow with Nakita, then a closing dinner and a karaoke send-off. Seabrook usually hosts free Friday sunset concerts through August; the 2027 lineup isn't out yet.</p></div></div>
+    <div class="day"><div class="when">Sat, Aug 14</div><div><h3>Checkout by 11 AM</h3></div></div>
+  </div>
+  <p class="small muted">Also on offer any day: clamming when the razor clam tides open, pickleball and cornhole at the pool house, kids' beach games, and day trips to Ocean Shores, about 25 minutes south.</p>
+  <div class="callout">
+    <h3>Why this week</h3>
+    <p class="small">August is the warmest month on this coast. Aug 7–14 also ends before Seattle Prep and Seattle Academy start orientation, classes or fall sports, based on their 2026 calendars. Neither school has published its 2027 dates yet.</p>
+  </div>
+</section>
+
+<section id="housing">
+  <h2>Housing &amp; cost</h2>
+  <p class="lede">Homes for Aug 7–14 are already bookable, and large houses are going fast.</p>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Home size</th><th class="num">Open for our week</th><th class="num">Typical week</th><th>Usually sleeps</th></tr></thead>
+      <tbody>
+        <tr><td>1–2 bedrooms</td><td class="num">89</td><td class="num">$4,252</td><td>2–6</td></tr>
+        <tr><td>3 bedrooms</td><td class="num">112</td><td class="num">$6,831</td><td>6–10</td></tr>
+        <tr><td>4 bedrooms</td><td class="num">52</td><td class="num">$10,514</td><td>8–15</td></tr>
+        <tr><td>5+ bedrooms</td><td class="num">16</td><td class="num">$13,115</td><td>12–24</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">Live search of Seabrook's rental system on Nov 1, 2026. "Typical week" is the median price for 7 nights, including the cleaning fee, 11% resort fee and 3.5% damage-protection fee, before 11.9% lodging tax. Prices and availability change daily.</p>
+  <div class="callout accent">
+    <h3>Budget rule of thumb</h3>
+    <p class="small">Take a home's listed weekly total and add about 12% for lodging tax. A typical 3-bedroom comes to roughly $7,650 for the week. Split between two families, that's about $3,800 each.</p>
+  </div>
+  <h3>Hub house candidates</h3>
+  <p class="small muted">The largest homes still open for Aug 7–14 as of Nov 4. We'll book one of these for group meals. Tap a name for photos and floor plans.</p>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Home</th><th>Bedrooms</th><th class="num">Sleeps</th><th class="num">Week, before tax</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.seabrookwa.com/vrp/unit/washington-house" target="_blank" rel="noopener">The Washington House</a></td><td>7</td><td class="num">24</td><td class="num">$19,943</td></tr>
+        <tr><td><a href="https://www.seabrookwa.com/vrp/unit/upper-left-coast" target="_blank" rel="noopener">Upper Left Coast</a></td><td>6</td><td class="num">22</td><td class="num">$20,867</td></tr>
+        <tr><td><a href="https://www.seabrookwa.com/vrp/unit/independence-hall" target="_blank" rel="noopener">Independence Hall</a></td><td>6</td><td class="num">20</td><td class="num">$15,841</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul class="clean small">
+    <li>Occupancy limits are strictly enforced. Everyone over age 2 counts.</li>
+    <li>Most homes allow up to 3 cars. Extra street parking is available through Guest Services.</li>
+    <li>Dog-friendly homes are marked. The fee is $75–90 per dog, plus tax.</li>
+    <li>About 40 homes have air conditioning. On this coast you rarely need it.</li>
+    <li>Some listings count a loft or bunk room as a bedroom. Check the photos.</li>
+    <li>Homes near active construction are discounted. Construction runs on weekdays and limited weekend hours.</li>
+  </ul>
+</section>
+
+<section id="booking">
+  <h2>Booking terms</h2>
+  <p>You book directly with Seabrook Hospitality at seabrookwa.com or (877) 779-9990. These are their current published terms.</p>
+  <div class="tablebox">
+    <table>
+      <tbody>
+        <tr><td><b>At booking</b></td><td>50% deposit charged to your card</td></tr>
+        <tr><td><b>Balance</b></td><td>Charged automatically 30 days before arrival, which is <b>July 8, 2027</b> for our week</td></tr>
+        <tr><td><b>Grace period</b></td><td>Full refund or home change within 48 hours of booking</td></tr>
+        <tr><td><b>Cancel 30+ days out</b></td><td>Full refund</td></tr>
+        <tr><td><b>Cancel 14–29 days out</b></td><td>Seabrook keeps 50%, plus fees and taxes</td></tr>
+        <tr><td><b>Cancel within 14 days</b></td><td>No refund</td></tr>
+        <tr><td><b>Change homes</b></td><td>15–30 days out costs 25% of rent; no changes within 14 days</td></tr>
+        <tr><td><b>Travel insurance</b></td><td>Optional, 6.95% of the total, bought with your first payment</td></tr>
+        <tr><td><b>Who can book</b></td><td>The renter must be 25 or older</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">No refunds for weather. Quiet hours run 10 PM to 7:30 AM. No smoking or vaping anywhere in Seabrook. Drones need a free permit.</p>
+</section>
+
+<section id="travel">
+  <h2>Getting there</h2>
+  <dl class="facts">
+    <div><dt>By car</dt><dd>About 2½ hours from Seattle, about 3 hours from Portland. No mountain passes or ferries.</dd></div>
+    <div><dt>Fly into</dt><dd>Sea-Tac (SEA) is the main airport</dd></div>
+    <div><dt>Airport shuttle</dt><dd>Seabrook runs a shuttle to and from Sea-Tac. Book through the Concierge.</dd></div>
+    <div><dt>Small airport</dt><dd>Bowerman (HQM) in Hoquiam is 28 miles away. Shuttle is $45 per person each way.</dd></div>
+  </dl>
+  <p class="small muted">For maps, use 4275 SR 109, Pacific Beach, WA 98571. Seabrook Concierge: (360) 276-4108 · concierge@seabrookwa.com. The Sea-Tac shuttle typically leaves Seabrook early morning and returns early afternoon, so confirm times before booking flights.</p>
+</section>
+
+<section id="expect">
+  <h2>What to expect</h2>
+  <div class="steps">
+    <div class="step"><b>Weather</b><p class="small">August highs are usually around 65°F, rarely below 60 or above 73. The ocean is cold. Bring layers.</p></div>
+    <div class="step"><b>In town</b><p class="small">Indoor and outdoor pools, fitness center, walk-on beach access, shops, restaurants and a market.</p></div>
+    <div class="step"><b>Free gear</b><p class="small">Guests borrow cornhole, pickleball, bocce, croquet, spikeball, footballs and more from the pool house.</p></div>
+    <div class="step"><b>Phones</b><p class="small">Verizon and AT&amp;T work best. Every home has Wi-Fi for calling.</p></div>
+  </div>
+  <h3>Homes include</h3>
+  <p class="small">Made beds, bath and beach towels for everyone, kitchen basics, starter coffee, dish and laundry soap, TV and Wi-Fi. Bring spices, oil, condiments, food storage and any baby gear. Cribs rent for $40.</p>
+  <h3>Good to know</h3>
+  <ul class="clean small">
+    <li>Clamming needs a Washington license, sold in Pacific Beach. Seabrook's beach follows the Mocrocks razor clam tides.</li>
+    <li>The nearest hospital is about 45 minutes away in Aberdeen.</li>
+    <li>Portable fire pits aren't allowed at homes. Use the community fire pits.</li>
+  </ul>
+</section>
+
+<section id="timeline">
+  <h2>Timeline</h2>
+  <div class="week">
+    <div class="day key"><div class="when">Now–Dec 15</div><div><h3>Interest form</h3><p class="muted small">Tells us how many families and how much space to plan for. Want to be a founding family? Say so on the form as early as you can.</p></div></div>
+    <div class="day key"><div class="when">By Dec 15</div><div><h3>Founding families booked</h3><p class="muted small">We confirm the founding families, book the hub house, and help each founding family pick a home nearby.</p></div></div>
+    <div class="day"><div class="when">Dec 16 to early spring 2027</div><div><h3>Everyone else books</h3><p class="muted small">Book as early as you're comfortable, and be booked by early spring (end of March) at the latest. Large homes go first, so earlier means more choice.</p></div></div>
+    <div class="day"><div class="when">July 8, 2027</div><div><h3>Balances charged</h3><p class="muted small">Seabrook charges the remaining 50% automatically.</p></div></div>
+    <div class="day key"><div class="when">Aug 7, 2027</div><div><h3>Takeover begins</h3></div></div>
+  </div>
+</section>
+
+<section id="resources">
+  <h2>Resources</h2>
+  <p>Everything you need to look at homes, check the rules and plan your days. Links open Seabrook's and other official sites in a new tab.</p>
+  <div class="links">
+    <div class="linkgroup">
+      <h3>Find and book a home</h3>
+      <ul class="clean small">
+        <li><a href="https://www.seabrookwa.com/vacation-rentals/" target="_blank" rel="noopener">Search Seabrook vacation rentals</a> (enter Aug 7 to Aug 14, 2027)</li>
+        <li><a href="https://www.seabrookwa.com/vacation-rentals/pet-friendly/" target="_blank" rel="noopener">Dog-friendly homes</a></li>
+        <li>Seabrook reservations: (877) 779-9990 &middot; reservations@seabrookwa.com</li>
+      </ul>
+    </div>
+    <div class="linkgroup">
+      <h3>Policies</h3>
+      <ul class="clean small">
+        <li><a href="https://www.seabrookwa.com/terms-conditions/" target="_blank" rel="noopener">Terms &amp; conditions</a> (payment, cancellation, fees)</li>
+        <li><a href="https://www.seabrookwa.com/rentals-faq/" target="_blank" rel="noopener">Rental FAQs</a> (what's in the homes, check-in, parking)</li>
+      </ul>
+    </div>
+    <div class="linkgroup">
+      <h3>Getting there and around</h3>
+      <ul class="clean small">
+        <li><a href="https://www.seabrookwa.com/seabrook-shuttle-service/" target="_blank" rel="noopener">Sea-Tac and Bowerman airport shuttles</a></li>
+        <li><a href="https://www.seabrookwa.com/seabrook-town-map/" target="_blank" rel="noopener">Seabrook town map</a></li>
+        <li>Seabrook Concierge: (360) 276-4108 &middot; concierge@seabrookwa.com</li>
+      </ul>
+    </div>
+    <div class="linkgroup">
+      <h3>Things to do</h3>
+      <ul class="clean small">
+        <li><a href="https://www.seabrookwa.com/events" target="_blank" rel="noopener">Seabrook events calendar</a></li>
+        <li><a href="https://www.seabrookwa.com/things-to-do/dining/" target="_blank" rel="noopener">Dining</a> &middot; <a href="https://www.seabrookwa.com/things-to-do/town-amenities/" target="_blank" rel="noopener">Pools and town amenities</a></li>
+        <li><a href="https://oceanshoresgolf.com/" target="_blank" rel="noopener">Ocean Shores Golf Course</a></li>
+        <li><a href="https://wdfw.wa.gov/fishing/shellfishing-regulations/razor-clams" target="_blank" rel="noopener">Razor clam seasons and tides</a> (Washington Dept. of Fish &amp; Wildlife)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="interest">
+  <h2>Interest form</h2>
+  <p>No commitment yet. This helps us size the group, pick the hub house and plan the week. <b>Please answer, even if you can't come this year.</b> When you tap the button, your email app opens with your answers filled in, addressed to okekehouse@gmail.com. Just hit send. Want to change something later? Send it again; we use your latest one. Questions? Reach Ben at 301-442-4122, Ang at 202-243-8472, or okekehouse@gmail.com.</p>
+  <form id="f" novalidate>
+    <fieldset>
+      <legend>Your household</legend>
+      <div class="row">
+        <div class="field"><label for="household">Family name <span class="req">*</span></label><input type="text" id="household" name="household" placeholder="The Johnson family" required></div>
+        <div class="field"><label for="contact">Main contact</label><input type="text" id="contact" name="contact" placeholder="First and last name"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="reach">Your email <span class="req">*</span></label><input type="email" id="reach" name="reach" autocomplete="email" required></div>
+        <div class="field"><label for="city">Traveling from</label><input type="text" id="city" name="city" placeholder="City, state"></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Who's coming</legend>
+      <div class="row">
+        <div class="field"><label for="adults">Adults (18+)</label><input type="number" id="adults" name="adults" min="0" max="30" inputmode="numeric" value="2"></div>
+        <div class="field"><label for="teens">Teens (13–17)</label><input type="number" id="teens" name="teens" min="0" max="30" inputmode="numeric" value="0"></div>
+        <div class="field"><label for="kids">Kids (3–12)</label><input type="number" id="kids" name="kids" min="0" max="30" inputmode="numeric" value="0"></div>
+        <div class="field"><label for="littles">Under 3</label><input type="number" id="littles" name="littles" min="0" max="30" inputmode="numeric" value="0"></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>How likely are you to come? <span class="req">*</span></legend>
+      <div class="choices" id="likely">
+        <label class="choice"><input type="radio" name="likely" value="in"><span>We're in</span></label>
+        <label class="choice"><input type="radio" name="likely" value="likely"><span>Very likely</span></label>
+        <label class="choice"><input type="radio" name="likely" value="maybe"><span>Maybe</span></label>
+        <label class="choice"><input type="radio" name="likely" value="no"><span>Can't this year</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset id="futureset" hidden>
+      <legend>We're planning a Takeover every other year. Want to hear about the next one?</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="future" value="yes"><span>Yes, keep us posted</span></label>
+        <label class="choice"><input type="radio" name="future" value="no"><span>No thanks</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Want to be a founding family?</legend>
+      <p class="small muted" id="fdesc">Founding families book by Dec 15, in the hub house or a home beside it, help shape the week, and get first pick. Up to five spots. <a href="#founding">What's a founding family?</a></p>
+      <p class="small" id="ffull" hidden><b>All founding family spots are taken.</b> Everyone else books from Dec 16 to early spring, as early as you're comfortable.</p>
+      <div class="choices" id="fchoices">
+        <label class="choice"><input type="radio" name="founding" value="yes"><span>Yes</span></label>
+        <label class="choice"><input type="radio" name="founding" value="maybe"><span>Tell me more</span></label>
+        <label class="choice"><input type="radio" name="founding" value="no"><span>Not this time</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Housing</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="housing" value="own"><span>Our own home</span></label>
+        <label class="choice"><input type="radio" name="housing" value="share"><span>Share with another family</span></label>
+        <label class="choice"><input type="radio" name="housing" value="unsure"><span>Not sure yet</span></label>
+      </div>
+      <div class="row">
+        <div class="field"><label for="beds">Bedrooms you'd need</label>
+          <select id="beds" name="beds"><option value="">Choose</option><option>1–2</option><option>3</option><option>4</option><option>5+</option></select></div>
+        <div class="field"><label for="budget">Lodging budget for your family (week)</label>
+          <select id="budget" name="budget"><option value="">Choose</option><option>Under $4,000</option><option>$4,000–7,000</option><option>$7,000–10,000</option><option>$10,000–14,000</option><option>$14,000+</option></select></div>
+      </div>
+      <div class="choices">
+        <label class="choice"><input type="checkbox" name="dog" value="yes"><span>Bringing a dog</span></label>
+        <label class="choice"><input type="checkbox" name="fly" value="yes"><span>Flying in</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>What sounds good?</legend>
+      <div class="choices">
+        <label class="choice"><input type="checkbox" name="acts" value="bbq-compete"><span>Compete in the BBQ cookoff</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="spades"><span>Game night: spades</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="dominoes"><span>Game night: dominoes</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="uno"><span>Game night: Uno</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="monopoly"><span>Game night: Monopoly</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="golf"><span>Golf outing</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="yoga"><span>Beach yoga</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="biking"><span>Group bike ride</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="bonfire"><span>Beach bonfire + s'mores</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="illumination"><span>Illumination Night</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="pizza"><span>Okeke Family Pizza Party</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="maumau"><span>Learn Mau Mau</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="wine"><span>Wine tasting</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="whiskey"><span>Whiskey stations on the Illumination walk</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="whiskey-host"><span>Host a whiskey station</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="icecream"><span>Ice cream social</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="karaoke"><span>Karaoke</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="clamming"><span>Clamming</span></label>
+        <label class="choice"><input type="checkbox" name="acts" value="kids"><span>Kids' activities</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Anything else?</legend>
+      <div class="field"><label for="notes">Dietary needs, accessibility, questions</label><textarea id="notes" name="notes"></textarea></div>
+    </fieldset>
+
+    <div class="formfoot">
+      <button class="btn" type="submit" id="submit">Email my answers</button>
+      <button class="btn ghost" type="button" id="copy">Copy my answers</button>
+      <span class="status" id="status" role="status" aria-live="polite"></span>
+    </div>
+    <p class="small muted" id="fallback">Email app didn't open? Tap <b>Copy my answers</b> and paste them into an email to <b>okekehouse@gmail.com</b>.</p>
+  </form>
+</section>
+
+
+</div>
+</main>
+
+<footer><div class="wrap">
+  <span>Black Family Takeover · Aug 7–14, 2027 · Seabrook, Washington</span>
+  <span>Questions: okekehouse@gmail.com · Ben 301-442-4122 · Ang 202-243-8472</span>
+  <span>Rental details come from Seabrook Hospitality's published terms and FAQ, checked Nov 1, 2026. Confirm current terms when you book.</span>
+</div></footer>
+
+<script>
+(function(){
+  const TO = 'okekehouse@gmail.com';
+  const form = document.getElementById('f');
+  const status = document.getElementById('status');
+  function setStatus(msg, kind){ status.textContent = msg; status.className = 'status' + (kind ? ' ' + kind : ''); }
+  function num(v){ const n = parseInt(v, 10); return isNaN(n) || n < 0 ? 0 : Math.min(n, 30); }
+  const futureset = document.getElementById('futureset');
+  function syncFuture(){ const v = form.querySelector('input[name="likely"]:checked'); futureset.hidden = !(v && v.value === 'no'); }
+  form.addEventListener('change', (e) => { if (e.target.name === 'likely') syncFuture(); saveDraft(); });
+  form.addEventListener('input', saveDraft);
+
+  // Founding spots: status.json is refreshed twice a day from all responses.
+  const fChoices = document.getElementById('fchoices'), fFull = document.getElementById('ffull'), fDesc = document.getElementById('fdesc');
+  fetch('status.json', {cache: 'no-store'}).then(r => r.ok ? r.json() : null).then(s => {
+    if (s && (s.foundingClosed || (s.foundingClaimed || 0) >= 5)) { fChoices.hidden = true; fFull.hidden = false; fDesc.hidden = true; }
+  }).catch(() => {});
+
+  const L = {in:"We're in", likely:'Very likely', maybe:'Maybe', no:"Can't this year"};
+  const F = {yes:'Yes', maybe:'Tell me more', no:'Not this time'};
+  const H = {own:'Our own home', share:'Share with another family', unsure:'Not sure yet'};
+  function collect(){
+    const fd = new FormData(form);
+    const t = k => (fd.get(k) || '').toString().trim();
+    const likely = t('likely');
+    return {
+      household: t('household').slice(0,120), contact: t('contact').slice(0,120), reach: t('reach').slice(0,160).toLowerCase(), city: t('city').slice(0,120),
+      adults: num(fd.get('adults')), teens: num(fd.get('teens')), kids: num(fd.get('kids')), littles: num(fd.get('littles')),
+      likely, founding: fChoices.hidden ? '' : t('founding'), future: likely === 'no' ? t('future') : '',
+      housing: t('housing'), beds: t('beds'), budget: t('budget'),
+      dog: fd.get('dog') === 'yes', fly: fd.get('fly') === 'yes',
+      acts: fd.getAll('acts').map(String).slice(0,20), notes: t('notes').slice(0,1500),
+      updatedAt: new Date().toISOString(), via: 'public'
+    };
+  }
+  function labelFor(name, val){ const i = form.querySelector('input[name="'+name+'"][value="'+val+'"]'); return i ? i.nextElementSibling.textContent : val; }
+  function compose(d){
+    const lines = [
+      'Black Family Takeover interest form',
+      '',
+      'Household: ' + d.household,
+      'Main contact: ' + (d.contact || '-'),
+      'Email: ' + d.reach,
+      'Traveling from: ' + (d.city || '-'),
+      'Coming: ' + (L[d.likely] || '-') + (d.likely === 'no' && d.future ? ' (next Takeover: ' + (d.future === 'yes' ? 'yes, keep us posted' : 'no thanks') + ')' : ''),
+      'People: ' + d.adults + ' adults, ' + d.teens + ' teens, ' + d.kids + ' kids, ' + d.littles + ' under 3',
+      'Founding family: ' + (F[d.founding] || '-'),
+      'Housing: ' + (H[d.housing] || '-') + (d.beds ? ', ' + d.beds + ' bedrooms' : ''),
+      'Lodging budget: ' + (d.budget || '-'),
+      'Dog: ' + (d.dog ? 'yes' : 'no') + ' · Flying in: ' + (d.fly ? 'yes' : 'no'),
+      'Sounds good: ' + (d.acts.length ? d.acts.map(a => labelFor('acts', a)).join(', ') : '-'),
+      'Notes: ' + (d.notes || '-'),
+      '',
+      '(Please leave the code below as is. It lets us count your answers.)',
+      'BFT-BEGIN',
+      btoa(unescape(encodeURIComponent(JSON.stringify(d)))),
+      'BFT-END'
+    ];
+    return lines.join('\n');
+  }
+  function validate(d){
+    if (!d.household) { setStatus('Add your family name so we know who you are.', 'err'); form.elements.household.focus(); return false; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.reach)) { setStatus('Add your email so we can match your answers.', 'err'); form.elements.reach.focus(); return false; }
+    if (!d.likely) { setStatus('Pick how likely you are to come.', 'err'); return false; }
+    return true;
+  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const d = collect(); if (!validate(d)) return;
+    const subject = 'Black Family Takeover RSVP: ' + d.household;
+    location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(compose(d));
+    setStatus('Your email app should open with everything filled in. Hit send and you’re done.', 'ok');
+  });
+  document.getElementById('copy').addEventListener('click', async () => {
+    const d = collect(); if (!validate(d)) return;
+    const text = 'Subject: Black Family Takeover RSVP: ' + d.household + '\n\n' + compose(d);
+    try { await navigator.clipboard.writeText(text); setStatus('Copied. Paste it into an email to okekehouse@gmail.com and send.', 'ok'); }
+    catch (err) { const ta = document.createElement('textarea'); ta.value = text; document.body.append(ta); ta.select(); try { document.execCommand('copy'); setStatus('Copied. Paste it into an email to okekehouse@gmail.com and send.', 'ok'); } catch (e2) { setStatus('Copy didn’t work here. Email your answers to okekehouse@gmail.com.', 'err'); } ta.remove(); }
+  });
+
+  // Keep a draft on this device so a closed tab doesn't lose answers.
+  function saveDraft(){ try { localStorage.setItem('bft-draft', JSON.stringify(collect())); } catch (e) {} }
+  try {
+    const d = JSON.parse(localStorage.getItem('bft-draft') || 'null');
+    if (d) {
+      ['household','contact','reach','city','notes'].forEach(k => { if (typeof d[k] === 'string' && form.elements[k]) form.elements[k].value = d[k]; });
+      ['adults','teens','kids','littles'].forEach(k => { if (typeof d[k] === 'number') form.elements[k].value = d[k]; });
+      ['beds','budget'].forEach(k => { if (typeof d[k] === 'string') form.elements[k].value = d[k]; });
+      ['likely','founding','housing','future'].forEach(k => form.querySelectorAll('input[name="'+k+'"]').forEach(i => { i.checked = i.value === d[k]; }));
+      form.elements.dog.checked = !!d.dog; form.elements.fly.checked = !!d.fly;
+      const acts = Array.isArray(d.acts) ? d.acts : [];
+      form.querySelectorAll('input[name="acts"]').forEach(i => { i.checked = acts.includes(i.value); });
+    }
+  } catch (e) {}
+  syncFuture();
+})();
+</script>
+
+</body>
+</html>
